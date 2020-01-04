@@ -16,7 +16,6 @@ try:
         GPIO.output(12, False)
         time.sleep(0.5)
 
-
 except KeyboardInterrupt:
     print('stop')
 finally:
