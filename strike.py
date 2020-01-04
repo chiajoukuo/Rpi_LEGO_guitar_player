@@ -12,7 +12,7 @@ pwm_s = GPIO.PWM(4, pwm_freq)
 pwm_s.start(0)
 
 dc = 20
-pwm_s.ChangeDuryCycle(dc)
+pwm_s.ChangeDutyCycle(dc)
 
 
 try:
