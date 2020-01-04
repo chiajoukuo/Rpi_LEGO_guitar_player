@@ -70,6 +70,8 @@ def setAngles(idx):
 try:
 	for idx in range(len(motor1)):
 		setAngles(idx)
+		import pdb
+		pdb.set_trace()
 
 except KeyboardInterrupt:
     print('stop')
