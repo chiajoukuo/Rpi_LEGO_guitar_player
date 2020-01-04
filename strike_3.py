@@ -11,7 +11,7 @@ pwm_s.start(0)
 
 try:
     while True:
-        pwm_s.ChangeDutyCycle(20)
+        pwm_s.ChangeDutyCycle(80)
         GPIO.output(11, True)
         GPIO.output(12, False)
         time.sleep(0.5)
