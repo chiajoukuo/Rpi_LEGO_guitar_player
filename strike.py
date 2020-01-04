@@ -1,31 +1,27 @@
 import RPi.GPIO as GPIO
 import time
-# import curses
-# from curses import wrapper
+
+pwm_freq = 200
 
 GPIO.setmode(GPIO.BCM)
-
 GPIO.setup(17, GPIO.OUT)
 GPIO.setup(18, GPIO.OUT)
+GPIO.setup(4, GPIO.OUT)
 
-# stdscr = curses.initscr()
-# stdscr.clear()
-# while True:
-#     ch = stdscr.getkey()
+pwm_s = GPIO.PWM(4, pwm_freq)
+pwm_s.start(0)
 
-#     if ch == 'q':
-#         curses.endwin()
-#         GPIO.output(17, False)
-#         GPIO.output(18, False)
-#         break
-#     if ch == 'x':
-#         GPIO.output(17, False)
-#         GPIO.output(18, False)
+dc = 20
+pwm_s.ChangeDuryCycle(dc)
+
+
 try:
     while True:
         GPIO.output(17, True)
         GPIO.output(18, False)
+
 except KeyboardInterrupt:
     print('stop')
 finally:
+    pwm_s.stop()
     GPIO.cleanup()
