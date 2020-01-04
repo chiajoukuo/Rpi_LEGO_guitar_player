@@ -26,6 +26,6 @@ try:
         GPIO.output(17, True)
         GPIO.output(18, False)
 except KeyboardInterrupt:
-    print(stop)
+    print('stop')
 finally:
     GPIO.cleanup()
