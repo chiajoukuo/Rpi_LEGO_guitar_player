@@ -6,7 +6,7 @@ GPIO.setup(17, GPIO.OUT)
 GPIO.setup(18, GPIO.OUT)
 pwm_s = GPIO.PWM(17,500)
 pwm_s.start(0)
-pwm_s.ChangeDutyCycle(10)
+pwm_s.ChangeDutyCycle(0.2)
 
 try:
     while True:
