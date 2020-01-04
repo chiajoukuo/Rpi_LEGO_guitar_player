@@ -11,9 +11,10 @@ pwm_s.start(0)
 
 try:
     while True:
+        pwm_s.ChangeDutyCycle(120)
         GPIO.output(11, True)
         GPIO.output(12, False)
-        pwm_s.ChangeDutyCycle(120)
+
 
 except KeyboardInterrupt:
     print('stop')
