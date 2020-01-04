@@ -8,7 +8,7 @@ pwm1=GPIO.PWM(5, 50)
 pwm1.start(0)
 
 GPIO.setup(7, GPIO.OUT)
-pwm1=GPIO.pwm(7, 50)
+pwm1=GPIO.PWM(7, 50)
 pwm1.start(0)
 
 G1, G2 = 0, 50
