@@ -1,7 +1,7 @@
 import RPi.GPIO as GPIO
 import time
 
-GPIO.setmode(GPIO.BCM)
+GPIO.setmode(GPIO.BOARD)
 GPIO.setup(17, GPIO.OUT)
 GPIO.setup(18, GPIO.OUT)
 pwm_s = GPIO.PWM(17,500)
@@ -16,5 +16,5 @@ try:
 except KeyboardInterrupt:
     print('stop')
 finally:
-    pwm.stop()
+    pwm_s.stop()
     GPIO.cleanup()

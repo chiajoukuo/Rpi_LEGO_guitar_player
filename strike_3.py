@@ -16,5 +16,5 @@ try:
 except KeyboardInterrupt:
     print('stop')
 finally:
-    pwm.stop()
+    pwm_s.stop()
     GPIO.cleanup()
