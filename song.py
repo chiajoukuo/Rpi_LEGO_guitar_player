@@ -64,7 +64,7 @@ def setAngles(idx):
 	GPIO.output(7, True)
 	pwm1.ChangeDutyCycle(duty1)
 	pwm2.ChangeDutyCycle(duty2)
-	sleep(1)
+	sleep(3)
 	# GPIO.output(7, False)
 	# pwm1.ChangeDutyCycle(0)
 try:
