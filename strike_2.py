@@ -4,6 +4,9 @@ import time
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(17, GPIO.OUT)
 GPIO.setup(18, GPIO.OUT)
+pwm_s = GPIO.PWM(17,500)
+pwm_s.start(0)
+pwm_s.ChangeDutyCycle(100)
 
 try:
     while True:
@@ -13,4 +16,5 @@ try:
 except KeyboardInterrupt:
     print('stop')
 finally:
+    pwm.stop()
     GPIO.cleanup()
