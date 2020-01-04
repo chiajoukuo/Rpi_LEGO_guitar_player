@@ -4,7 +4,8 @@ import time
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(11, GPIO.OUT)
 GPIO.setup(12, GPIO.OUT)
-pwm_s = GPIO.PWM(11,500)
+GPIO.setup(3, GPIO.OUT)
+pwm_s = GPIO.PWM(3,500)
 pwm_s.start(0)
 
 
@@ -12,7 +13,7 @@ try:
     while True:
         GPIO.output(11, True)
         GPIO.output(12, False)
-        pwm_s.ChangeDutyCycle(0.2)
+        pwm_s.ChangeDutyCycle(120)
 
 except KeyboardInterrupt:
     print('stop')
