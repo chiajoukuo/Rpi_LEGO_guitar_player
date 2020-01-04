@@ -8,8 +8,8 @@ pwm1=GPIO.PWM(5, 50)
 pwm1.start(0)
 
 GPIO.setup(7, GPIO.OUT)
-pwm1=GPIO.PWM(7, 50)
-pwm1.start(0)
+pwm2=GPIO.PWM(7, 50)
+pwm2.start(0)
 
 G1, G2 = 0, 50
 GB1, GB2 = 37.5, 50
@@ -52,10 +52,10 @@ def setAngle1(angle):
 def setAngle2(angle):
 	duty = angle / 18 + 2
 	GPIO.output(7, True)
-	pwm1.ChangeDutyCycle(duty)
+	pwm2.ChangeDutyCycle(duty)
 	sleep(0.2)
 	GPIO.output(7, False)
-	pwm1.ChangeDutyCycle(0)
+	pwm2.ChangeDutyCycle(0)
 
 def setAngles(idx):
 	duty1 = motor1[idx] / 18 + 2
