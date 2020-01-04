@@ -17,9 +17,9 @@ Fm71, Fm72 = 75, 125
 C1, C2 = 112.5, 87.5
 Am71, Am72 = 75, 87.5
 
-motor1 = [C1, GB1, Fm71, G1, Am71]
+motor1 = [Am71, C1, GB1, Fm71, G1, Am71]
 
-motor2 = [C2, GB2, Fm72, G2, Am72]
+motor2 = [Am72, C2, GB2, Fm72, G2, Am72]
 
 def setAngles(idx):
 	duty1 = motor1[idx] / 18 + 2
