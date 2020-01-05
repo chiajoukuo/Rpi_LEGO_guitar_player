@@ -62,14 +62,15 @@ try:
 	for idx in range(len(motor1)):
 		setAngles(idx)        
 		pwm_s.ChangeDutyCycle(80)
-        GPIO.output(11, True)
-        GPIO.output(12, False)
-
+		GPIO.output(11, True)
+		GPIO.output(12, False)
+		
 except KeyboardInterrupt:
     print('stop')
 finally:
     pwm1.stop()
     pwm2.stop()
+    pwm_s.stop()
     GPIO.cleanup()
 
 
